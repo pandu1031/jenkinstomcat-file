@@ -3,7 +3,7 @@ pipeline{
     agent any
     parameters {
         string(name:'BRANCH_NAME', defaultValue: 'source', description: 'Enter source branch name')
-        string(name:'BUILD_PIPE', defaultValue: 'pipeline', description: 'Enter source branch name')
+        string(name:'BUILD_PIPE', defaultValue: 'pipeline', description: 'Enter pipeline branch name')
     }
 
     stages{
