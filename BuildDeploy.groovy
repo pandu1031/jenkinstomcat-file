@@ -27,7 +27,7 @@ pipeline{
                 println "here im uploading artifacts from jenkins server to tomcat"
                 sh "aws s3 ls"
                 sh "aws s3 ls s3://mamuu"
-                sh "aws s3 cp target/hello-${BUILD_NUM}.war s3://mamuu/chintu/${BRANCH_NAME}/${BUILD_NUM}" 
+                sh "aws s3 cp target/hello-${BUILD_NUMBER}.war s3://mamuu/chintu/${BRANCH_NAME}/${BUILD_NUMBER}" 
             }
         }
 
