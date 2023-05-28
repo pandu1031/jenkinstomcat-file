@@ -34,7 +34,7 @@ pipeline{
         stage("Deployment"){
             steps{
                 println "deploying the artifacts to tomcat server"
-                sh "scp -i /tmp/mamu1031.pem/tmp/tomcatinstall.sh ec2-user@${SERVER_IP}:/tmp/"
+                sh "scp -i /tmp/mamu1031.pem /tmp/tomcatinstall.sh ec2-user@${SERVER_IP}:/tmp/"
                 sh "ssh -i /tmp/mamu1031.pem ec2-user@${SERVER_IP} \"bash /tmp/tomcatinstall.sh  && systemctl status tomcat\""
             }
         }
